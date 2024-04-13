@@ -50,7 +50,7 @@ public class AuthorityController {
     }
 
     @GetMapping("/getauthority2")
-    public List<AuthorityDTO> getauthemps(@RequestParam Integer emps) {
+    public List<AuthorityDTO> getauthemps(@RequestParam List<Integer> emps) {
         
         List<AuthorityDTO> auths= authorityService.getAutherbyemsp(emps);
         return auths;

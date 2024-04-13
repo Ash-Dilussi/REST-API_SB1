@@ -55,7 +55,7 @@ public class AuthorityService {
         return modelMapper.map(authoritiesList, new TypeToken<List<AuthorityDTO>>(){}.getType());
     }
 
-    public List<AuthorityDTO> getAutherbyemsp(Integer emps){
+    public List<AuthorityDTO> getAutherbyemsp(List<Integer> emps){
 
         List<Authority> authoritiesList = authorityRepo.getAuthorityByAuthemps(emps);
         return modelMapper.map(authoritiesList, new TypeToken<List<AuthorityDTO>>(){}.getType());

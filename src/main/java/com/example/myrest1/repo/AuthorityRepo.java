@@ -22,8 +22,8 @@ public interface AuthorityRepo extends JpaRepository<Authority ,Integer>{
      @Query(value= "Select * FROM AUTHORITY WHERE aclearance= ?1", nativeQuery = true)
      List<Authority> getAuthorityByAuthPOST(String aclearance);
 
-     @Query(value= "Select * FROM AUTHORITY WHERE emps= ?1", nativeQuery = true)
-     List<Authority> getAuthorityByAuthemps(Integer emps);
+     @Query(value= "Select * FROM AUTHORITY WHERE emps in :nums", nativeQuery = true)
+     List<Authority> getAuthorityByAuthemps(@Param("nums") List<Integer> nums);
 
     // Iterable<T>
 
