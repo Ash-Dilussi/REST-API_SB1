@@ -11,6 +11,7 @@ public class AuthorityMapper {
             
             authority.getAname(),
             authority.getAclearance(),
+            authority.getEmps(),
             authority.getAid()
         );
 
@@ -23,6 +24,7 @@ public class AuthorityMapper {
             
             authorityDTO.getAname(),
             authorityDTO.getAclearance(),
+            authorityDTO.getEmps(),
             authorityDTO.getAid()
         );
     }

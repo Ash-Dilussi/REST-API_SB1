@@ -12,6 +12,7 @@ public class AuthorityDTO {
     
     private String aname;
     private String aclearance;
+    private int emps;
     private int aid;
     
 }

@@ -18,6 +18,7 @@ public class Authority {
     
     private String aname;
     private String aclearance;
+    private int emps;
     @Id
     private int aid;
 
