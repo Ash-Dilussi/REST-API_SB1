@@ -30,11 +30,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/getUsers")
-    public List<UserDTO> getUser() {
+    // @GetMapping("/getUsers")
+    // public List<UserDTO> getUser() {
 
-        return userService.getAllUsers();
-    }
+    //     return userService.getAllUsers();
+    // }
     
 
 
@@ -64,15 +64,15 @@ public class UserController {
     }
     
 
-    @GetMapping("/getUserByUserId/{userId}")
-    public UserDTO getUserByUserId(@PathVariable String userId) {
-        return userService.getUserById(userId);
-    }
+    // @GetMapping("/getUserByUserId/{userId}")
+    // public UserDTO getUserByUserId(@PathVariable String userId) {
+    //     return userService.getUserById(userId);
+    // }
 
-    @GetMapping("/getUserByUserIdandAddress/{userId}/{address}")
-    public UserDTO getUserByUserIdandAddress(@PathVariable String userId,@PathVariable String address) {
-        return userService.getUserByIdandAddress(userId,address);
-    }
+    // @GetMapping("/getUserByUserIdandAddress/{userId}/{address}")
+    // public UserDTO getUserByUserIdandAddress(@PathVariable String userId,@PathVariable String address) {
+    //     return userService.getUserByIdandAddress(userId,address);
+    // }
 
     
 

@@ -1,5 +1,6 @@
 package com.example.myrest1.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.modelmapper.ModelMapper;
@@ -29,12 +30,29 @@ public class UserService {
         return userDTO;
     }
 
-    public List<UserDTO> getAllUsers(){
+    //MySQL
+    //public List<UserDTO> getAllUsers(){
         
-        List<User> userList= userRepo.findAll();
-        return modelMapper.map(userList, new TypeToken<List<UserDTO>>(){}.getType());
+        // List<User> userList= userRepo.findAll();
+        //return modelMapper.map(userList, new TypeToken<List<UserDTO>>(){}.getType());
 
+   
+    //}
+
+
+    //Postgres
+    public Iterable<UserDTO> getAllUsers(){
+
+       Iterable<User> userList= userRepo.findAll();
+
+    //    List<User> userList = new ArrayList<User>();
+    //     while (iterator.hasNext()) {
+    //         actualList.add(iterator.next());
+    //     }
+
+        return modelMapper.map(userList, new TypeToken<List<UserDTO>>(){}.getType());
     }
+
     
 
     public UserDTO updateUser(UserDTO userDTO){
@@ -49,17 +67,17 @@ public class UserService {
     }
 
 
-    public UserDTO getUserById(String userId){
+    // public UserDTO getUserById(String userId){
 
-        User user= userRepo.getUserByUserID(userId);
-        return modelMapper.map(user, UserDTO.class);
+    //     User user= userRepo.getUserByUserID(userId);
+    //     return modelMapper.map(user, UserDTO.class);
 
-    }
+    // }
 
-    public UserDTO getUserByIdandAddress(String userId, String address){
+    // public UserDTO getUserByIdandAddress(String userId, String address){
 
-        User user= userRepo.getUserByUserIdandAddress(userId, address);
-        return modelMapper.map(user, UserDTO.class);
-    }
+    //     User user= userRepo.getUserByUserIdandAddress(userId, address);
+    //     return modelMapper.map(user, UserDTO.class);
+    // }
 
 }
